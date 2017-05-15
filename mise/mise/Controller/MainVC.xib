@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="mise" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="MNa-Qv-Dlz" id="dHv-wb-jLI"/>
+                <outlet property="forwardButton" destination="lp4-Fc-yVx" id="rQB-E0-h4H"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="iQW-7G-VRS" id="cFo-jx-QPW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdJ-ih-qtU">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem title="&lt;" id="MNa-Qv-Dlz">
+                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backTapped:" destination="-1" id="lKg-dC-gf5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="kIo-u9-6fS"/>
+                        <barButtonItem systemItem="refresh" id="sQC-jk-6fl">
+                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="refreshTapped:" destination="-1" id="2iU-kk-sr3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="m6x-2R-WiX"/>
+                        <barButtonItem title="&gt;" id="lp4-Fc-yVx">
+                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="forwardTapped:" destination="-1" id="urR-zj-Dqh"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQW-7G-VRS">
+                    <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="OdJ-ih-qtU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3xe-Z0-JSZ"/>
+                <constraint firstItem="iQW-7G-VRS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="75N-T3-cCa"/>
+                <constraint firstAttribute="bottom" secondItem="OdJ-ih-qtU" secondAttribute="bottom" id="E1l-d9-grN"/>
+                <constraint firstAttribute="trailing" secondItem="OdJ-ih-qtU" secondAttribute="trailing" id="J5R-oa-8DC"/>
+                <constraint firstAttribute="trailing" secondItem="iQW-7G-VRS" secondAttribute="trailing" id="jIg-Hh-MXm"/>
+                <constraint firstItem="OdJ-ih-qtU" firstAttribute="top" secondItem="iQW-7G-VRS" secondAttribute="bottom" id="jwX-nO-lVT"/>
+                <constraint firstItem="iQW-7G-VRS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="yWA-Ul-1oI"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
